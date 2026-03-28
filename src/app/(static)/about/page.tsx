@@ -30,7 +30,7 @@ export default function AboutPage() {
       {/* Hero */}
       <section className="relative bg-neutral-950 text-white py-24 text-center overflow-hidden">
         <Image
-          src="https://picsum.photos/seed/ghain-about-hero/1920/600"
+          src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1920&h=600&fit=crop"
           alt="About Ghain"
           fill
           className="object-cover opacity-40"
@@ -82,7 +82,7 @@ export default function AboutPage() {
           {/* Our story image */}
           <div className="aspect-[4/5] relative w-full overflow-hidden">
             <Image
-              src="https://picsum.photos/seed/ghain-about-story/800/1000"
+              src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=800&h=1000&fit=crop"
               alt="Our story"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"

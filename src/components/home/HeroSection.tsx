@@ -6,7 +6,7 @@ export function HeroSection() {
     <section className="h-screen relative overflow-hidden">
       {/* Background image */}
       <Image
-        src="https://picsum.photos/seed/ghain-hero/1920/1080"
+        src="https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?w=1920&h=1080&fit=crop"
         alt="Ghain hero"
         fill
         className="object-cover"

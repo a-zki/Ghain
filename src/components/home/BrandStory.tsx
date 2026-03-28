@@ -9,7 +9,7 @@ export function BrandStory() {
         <div className="lg:w-1/2">
           <div className="aspect-[4/5] relative overflow-hidden">
             <Image
-              src="https://picsum.photos/seed/ghain-brand/800/1000"
+              src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=800&h=1000&fit=crop"
               alt="Ghain brand story"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"

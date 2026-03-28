@@ -42,7 +42,7 @@ export function ProductImageGallery({ images }: ProductImageGalleryProps) {
     return (
       <div className="aspect-[3/4] relative bg-neutral-200 flex items-center justify-center">
         <Image
-          src="https://picsum.photos/seed/ghain-placeholder/800/1067"
+          src="https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?w=800&h=1067&fit=crop"
           alt="Product image placeholder"
           fill
           sizes="(max-width: 1024px) 100vw, 55vw"

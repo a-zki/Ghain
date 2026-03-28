@@ -3,9 +3,9 @@ import Image from 'next/image'
 import type { Category } from '@/types/product'
 
 const collectionImages: Record<string, string> = {
-  clothing: 'https://picsum.photos/seed/ghain-clothing/800/1067',
-  footwear: 'https://picsum.photos/seed/ghain-footwear/800/1067',
-  accessories: 'https://picsum.photos/seed/ghain-accessories/800/1067',
+  clothing: 'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=800&h=1067&fit=crop',
+  footwear: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&h=1067&fit=crop',
+  accessories: 'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=800&h=1067&fit=crop',
 }
 
 type FeaturedCollectionsProps = {
@@ -30,7 +30,7 @@ export function FeaturedCollections({ categories }: FeaturedCollectionsProps) {
               <Image
                 src={
                   collectionImages[category.slug] ??
-                  `https://picsum.photos/seed/ghain-${category.slug}/800/1067`
+                  `https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?w=800&h=1067&fit=crop`
                 }
                 alt={`${category.name} collection`}
                 fill
