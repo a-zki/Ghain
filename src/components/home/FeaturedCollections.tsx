@@ -1,11 +1,12 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import type { Category } from '@/types/product'
 
-const gradients = [
-  'from-neutral-400 to-neutral-600',
-  'from-neutral-500 to-neutral-700',
-  'from-neutral-300 to-neutral-500',
-]
+const collectionImages: Record<string, string> = {
+  clothing: 'https://picsum.photos/seed/ghain-clothing/800/1067',
+  footwear: 'https://picsum.photos/seed/ghain-footwear/800/1067',
+  accessories: 'https://picsum.photos/seed/ghain-accessories/800/1067',
+}
 
 type FeaturedCollectionsProps = {
   categories: Category[]
@@ -18,16 +19,23 @@ export function FeaturedCollections({ categories }: FeaturedCollectionsProps) {
         Collections
       </h2>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
-        {categories.map((category, index) => (
+        {categories.map((category) => (
           <Link
             key={category.slug}
             href={`/shop/${category.slug}`}
             className="group"
           >
             <div className="aspect-[3/4] relative overflow-hidden bg-neutral-100">
-              {/* Placeholder gradient background */}
-              <div
-                className={`absolute inset-0 bg-gradient-to-br ${gradients[index % gradients.length]} transition-transform duration-500 group-hover:scale-105`}
+              {/* Collection image */}
+              <Image
+                src={
+                  collectionImages[category.slug] ??
+                  `https://picsum.photos/seed/ghain-${category.slug}/800/1067`
+                }
+                alt={`${category.name} collection`}
+                fill
+                sizes="(max-width: 1024px) 100vw, 33vw"
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
               />
 
               {/* Overlay */}

@@ -15,8 +15,8 @@
 ## Current Status
 - **Phase:** ALL 6 PHASES COMPLETE + Supabase integration + Manual testing PASSED
 - **Build Status:** PASSING (zero errors, 31 routes)
-- **Last Action:** Full manual Chrome testing — all core flows working
-- **Next Step:** Upload product images to Supabase Storage, deploy to Vercel
+- **Last Action:** Added picsum.photos placeholder images across the entire site
+- **Next Step:** Replace placeholder images with real product photos, deploy to Vercel
 - **Bug fixed:** Checkout page hydration issue (Zustand localStorage rehydration timing)
 
 ## Manual Test Results (2026-03-28)
@@ -195,7 +195,7 @@ profiles, categories, products, product_variants, addresses, orders, order_items
 1. ~~Create Supabase project + run migrations~~ DONE
 2. ~~Set environment variables (.env.local from .env.example)~~ DONE
 3. ~~Replace mock data with real Supabase queries in server actions~~ DONE
-4. Upload product images to Supabase Storage
+4. ~~Upload product images to Supabase Storage~~ Using picsum.photos placeholders (replace with real photos later)
 5. Configure Stripe keys (test + live)
 6. Set up Resend domain verification
 7. Deploy to Vercel
@@ -207,3 +207,4 @@ profiles, categories, products, product_variants, addresses, orders, order_items
 ## Known Issues / Blockers
 - None. Build passes cleanly with zero errors.
 - All pages now query real Supabase database via server actions in `src/actions/products.ts`.
+- Product images are picsum.photos placeholders (seeded by slug for consistency). Replace with real photos when available.

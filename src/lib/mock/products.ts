@@ -1,4 +1,5 @@
 import type { Product, Category } from '@/types/product'
+import { getPlaceholderImages } from '@/lib/placeholder-images'
 
 const categories: Category[] = [
   {
@@ -66,10 +67,7 @@ const products: Product[] = [
     categoryId: 'cat-clothing',
     categorySlug: 'clothing',
     categoryName: 'Clothing',
-    images: [
-      { src: '', alt: 'Essential Oversized Tee - Front', position: 0 },
-      { src: '', alt: 'Essential Oversized Tee - Back', position: 1 },
-    ],
+    images: getPlaceholderImages('essential-oversized-tee', 'Essential Oversized Tee'),
     variants: makeVariants(standardSizes, standardColors, 'ot'),
     details: [
       { title: 'Material', content: '100% Cotton, 280gsm' },
@@ -95,10 +93,7 @@ const products: Product[] = [
     categoryId: 'cat-clothing',
     categorySlug: 'clothing',
     categoryName: 'Clothing',
-    images: [
-      { src: '', alt: 'Relaxed Cargo Pants - Front', position: 0 },
-      { src: '', alt: 'Relaxed Cargo Pants - Side', position: 1 },
-    ],
+    images: getPlaceholderImages('relaxed-cargo-pants', 'Relaxed Cargo Pants'),
     variants: makeVariants(standardSizes, [standardColors[0], standardColors[2], { name: 'Navy', hex: '#0A1128' }], 'cp'),
     details: [
       { title: 'Material', content: 'Cotton Ripstop' },
@@ -124,10 +119,7 @@ const products: Product[] = [
     categoryId: 'cat-clothing',
     categorySlug: 'clothing',
     categoryName: 'Clothing',
-    images: [
-      { src: '', alt: 'Heavyweight Hoodie - Front', position: 0 },
-      { src: '', alt: 'Heavyweight Hoodie - Detail', position: 1 },
-    ],
+    images: getPlaceholderImages('heavyweight-hoodie', 'Heavyweight Hoodie'),
     variants: makeVariants(['S', 'M', 'L', 'XL', 'XXL'], standardColors, 'hh'),
     details: [
       { title: 'Material', content: '100% Cotton Fleece, 420gsm' },
@@ -153,10 +145,7 @@ const products: Product[] = [
     categoryId: 'cat-clothing',
     categorySlug: 'clothing',
     categoryName: 'Clothing',
-    images: [
-      { src: '', alt: 'Minimal Track Jacket - Front', position: 0 },
-      { src: '', alt: 'Minimal Track Jacket - Back', position: 1 },
-    ],
+    images: getPlaceholderImages('minimal-track-jacket', 'Minimal Track Jacket'),
     variants: makeVariants(standardSizes, [standardColors[0], { name: 'Navy', hex: '#0A1128' }], 'tj'),
     details: [
       { title: 'Material', content: 'Nylon / Polyester blend' },
@@ -182,10 +171,7 @@ const products: Product[] = [
     categoryId: 'cat-clothing',
     categorySlug: 'clothing',
     categoryName: 'Clothing',
-    images: [
-      { src: '', alt: 'Structured Wide-Leg Trousers - Front', position: 0 },
-      { src: '', alt: 'Structured Wide-Leg Trousers - Detail', position: 1 },
-    ],
+    images: getPlaceholderImages('structured-wide-leg-trousers', 'Structured Wide-Leg Trousers'),
     variants: makeVariants(standardSizes, [standardColors[0], { name: 'Beige', hex: '#C8AD7F' }], 'wt'),
     details: [
       { title: 'Material', content: 'Wool / Polyester blend' },
@@ -211,10 +197,7 @@ const products: Product[] = [
     categoryId: 'cat-clothing',
     categorySlug: 'clothing',
     categoryName: 'Clothing',
-    images: [
-      { src: '', alt: 'Cropped Mock Neck - Front', position: 0 },
-      { src: '', alt: 'Cropped Mock Neck - Side', position: 1 },
-    ],
+    images: getPlaceholderImages('cropped-mock-neck', 'Cropped Mock Neck'),
     variants: makeVariants(['XS', 'S', 'M', 'L'], [standardColors[0], standardColors[1], { name: 'Beige', hex: '#C8AD7F' }], 'mn'),
     details: [
       { title: 'Material', content: '90% Cotton, 10% Cashmere' },
@@ -240,10 +223,7 @@ const products: Product[] = [
     categoryId: 'cat-clothing',
     categorySlug: 'clothing',
     categoryName: 'Clothing',
-    images: [
-      { src: '', alt: 'Utility Vest - Front', position: 0 },
-      { src: '', alt: 'Utility Vest - Back', position: 1 },
-    ],
+    images: getPlaceholderImages('utility-vest', 'Utility Vest'),
     variants: makeVariants(standardSizes, [standardColors[0], { name: 'Gray', hex: '#808080' }], 'uv'),
     details: [
       { title: 'Material', content: 'Nylon with DWR coating' },
@@ -269,10 +249,7 @@ const products: Product[] = [
     categoryId: 'cat-footwear',
     categorySlug: 'footwear',
     categoryName: 'Footwear',
-    images: [
-      { src: '', alt: 'Suede Low-Top - Side', position: 0 },
-      { src: '', alt: 'Suede Low-Top - Top', position: 1 },
-    ],
+    images: getPlaceholderImages('suede-low-top', 'Suede Low-Top'),
     variants: makeVariants(
       ['40', '41', '42', '43', '44'],
       [standardColors[0], standardColors[1], { name: 'Beige', hex: '#C8AD7F' }],
@@ -302,10 +279,7 @@ const products: Product[] = [
     categoryId: 'cat-footwear',
     categorySlug: 'footwear',
     categoryName: 'Footwear',
-    images: [
-      { src: '', alt: 'Chunky Runner - Side', position: 0 },
-      { src: '', alt: 'Chunky Runner - Back', position: 1 },
-    ],
+    images: getPlaceholderImages('chunky-runner', 'Chunky Runner'),
     variants: makeVariants(
       ['40', '41', '42', '43', '44', '45'],
       [standardColors[0], standardColors[1]],
@@ -335,10 +309,7 @@ const products: Product[] = [
     categoryId: 'cat-accessories',
     categorySlug: 'accessories',
     categoryName: 'Accessories',
-    images: [
-      { src: '', alt: 'Woven Leather Belt - Full', position: 0 },
-      { src: '', alt: 'Woven Leather Belt - Detail', position: 1 },
-    ],
+    images: getPlaceholderImages('woven-leather-belt', 'Woven Leather Belt'),
     variants: makeVariants(
       ['S', 'M', 'L'],
       [standardColors[0], { name: 'Beige', hex: '#C8AD7F' }],
@@ -368,10 +339,7 @@ const products: Product[] = [
     categoryId: 'cat-accessories',
     categorySlug: 'accessories',
     categoryName: 'Accessories',
-    images: [
-      { src: '', alt: 'Canvas Tote Bag - Front', position: 0 },
-      { src: '', alt: 'Canvas Tote Bag - Interior', position: 1 },
-    ],
+    images: getPlaceholderImages('canvas-tote-bag', 'Canvas Tote Bag'),
     variants: [
       {
         id: 'tb-0',
@@ -414,10 +382,7 @@ const products: Product[] = [
     categoryId: 'cat-accessories',
     categorySlug: 'accessories',
     categoryName: 'Accessories',
-    images: [
-      { src: '', alt: 'Merino Wool Beanie - Front', position: 0 },
-      { src: '', alt: 'Merino Wool Beanie - On model', position: 1 },
-    ],
+    images: getPlaceholderImages('merino-wool-beanie', 'Merino Wool Beanie'),
     variants: [
       {
         id: 'mb-0',

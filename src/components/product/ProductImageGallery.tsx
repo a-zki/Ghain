@@ -40,8 +40,17 @@ export function ProductImageGallery({ images }: ProductImageGalleryProps) {
 
   if (sortedImages.length === 0) {
     return (
-      <div className="aspect-[3/4] bg-neutral-200 flex items-center justify-center">
-        <Package size={48} className="text-neutral-400" />
+      <div className="aspect-[3/4] relative bg-neutral-200 flex items-center justify-center">
+        <Image
+          src="https://picsum.photos/seed/ghain-placeholder/800/1067"
+          alt="Product image placeholder"
+          fill
+          sizes="(max-width: 1024px) 100vw, 55vw"
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-black/10 flex items-center justify-center">
+          <Package size={48} className="text-white/60" />
+        </div>
       </div>
     )
   }

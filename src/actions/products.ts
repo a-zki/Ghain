@@ -1,6 +1,7 @@
 'use server'
 
 import { createClient } from '@/lib/supabase/server'
+import { getPlaceholderImages } from '@/lib/placeholder-images'
 import type { Product, Category, ProductVariant, ProductImage, ProductDetail } from '@/types/product'
 import type { FilterState } from '@/types/filters'
 
@@ -63,7 +64,9 @@ function mapProduct(row: DbProduct, variants: DbVariant[]): Product {
     categoryId: row.category_id ?? '',
     categorySlug: row.categories?.slug ?? '',
     categoryName: row.categories?.name ?? '',
-    images: (row.images ?? []) as ProductImage[],
+    images: ((row.images ?? []) as ProductImage[]).length > 0
+      ? (row.images as ProductImage[])
+      : getPlaceholderImages(row.slug, row.name),
     variants: variants.map(mapVariant),
     details: (row.details ?? []) as ProductDetail[],
     isNew: row.is_new,

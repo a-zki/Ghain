@@ -1,12 +1,21 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 export function BrandStory() {
   return (
     <section className="py-24">
       <div className="flex flex-col lg:flex-row gap-12 lg:gap-24">
-        {/* Image placeholder */}
+        {/* Brand story image */}
         <div className="lg:w-1/2">
-          <div className="aspect-[4/5] bg-neutral-200" />
+          <div className="aspect-[4/5] relative overflow-hidden">
+            <Image
+              src="https://picsum.photos/seed/ghain-brand/800/1000"
+              alt="Ghain brand story"
+              fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="object-cover"
+            />
+          </div>
         </div>
 
         {/* Text content */}

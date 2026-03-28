@@ -1,10 +1,19 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 export function HeroSection() {
   return (
     <section className="h-screen relative overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-neutral-900 to-black" />
+      {/* Background image */}
+      <Image
+        src="https://picsum.photos/seed/ghain-hero/1920/1080"
+        alt="Ghain hero"
+        fill
+        className="object-cover"
+        priority
+      />
+      {/* Dark overlay for text contrast */}
+      <div className="absolute inset-0 bg-black/50" />
 
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full px-4 text-center">

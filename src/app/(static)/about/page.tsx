@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import { PageContainer } from '@/components/layout/PageContainer'
 
 export const metadata: Metadata = {
@@ -27,13 +28,22 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-neutral-950 text-white py-24 text-center">
-        <p className="text-xs uppercase tracking-[0.3em] text-neutral-400 mb-4">
-          GHAIN
-        </p>
-        <h1 className="font-display text-4xl md:text-6xl font-light tracking-tight">
-          The Art of Less
-        </h1>
+      <section className="relative bg-neutral-950 text-white py-24 text-center overflow-hidden">
+        <Image
+          src="https://picsum.photos/seed/ghain-about-hero/1920/600"
+          alt="About Ghain"
+          fill
+          className="object-cover opacity-40"
+          priority
+        />
+        <div className="relative z-10">
+          <p className="text-xs uppercase tracking-[0.3em] text-neutral-400 mb-4">
+            GHAIN
+          </p>
+          <h1 className="font-display text-4xl md:text-6xl font-light tracking-tight">
+            The Art of Less
+          </h1>
+        </div>
       </section>
 
       {/* Our Story */}
@@ -69,8 +79,16 @@ export default function AboutPage() {
             </div>
           </div>
 
-          {/* Image placeholder */}
-          <div className="aspect-[4/5] bg-neutral-100 w-full" />
+          {/* Our story image */}
+          <div className="aspect-[4/5] relative w-full overflow-hidden">
+            <Image
+              src="https://picsum.photos/seed/ghain-about-story/800/1000"
+              alt="Our story"
+              fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="object-cover"
+            />
+          </div>
         </div>
       </PageContainer>
 
